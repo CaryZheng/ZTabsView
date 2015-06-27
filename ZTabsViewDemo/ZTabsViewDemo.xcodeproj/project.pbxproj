@@ -13,6 +13,10 @@
 		4A6D96041B3ED58D002EEF31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D96031B3ED58D002EEF31 /* Images.xcassets */; };
 		4A6D96071B3ED58D002EEF31 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D96051B3ED58D002EEF31 /* LaunchScreen.xib */; };
 		4A6D96131B3ED58D002EEF31 /* ZTabsViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D96121B3ED58D002EEF31 /* ZTabsViewDemoTests.swift */; };
+		4A6D961E1B3ED64A002EEF31 /* ZTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D961D1B3ED64A002EEF31 /* ZTabsView.swift */; };
+		4A6D96221B3ED6DE002EEF31 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D96211B3ED6DE002EEF31 /* ColorConstant.swift */; };
+		4A6D96251B3ED750002EEF31 /* ColorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D96241B3ED750002EEF31 /* ColorUtility.swift */; };
+		4A6D96281B3ED83A002EEF31 /* ZLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D96271B3ED83A002EEF31 /* ZLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		4A6D960C1B3ED58D002EEF31 /* ZTabsViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZTabsViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6D96111B3ED58D002EEF31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A6D96121B3ED58D002EEF31 /* ZTabsViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZTabsViewDemoTests.swift; sourceTree = "<group>"; };
+		4A6D961D1B3ED64A002EEF31 /* ZTabsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZTabsView.swift; sourceTree = "<group>"; };
+		4A6D96211B3ED6DE002EEF31 /* ColorConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
+		4A6D96241B3ED750002EEF31 /* ColorUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtility.swift; sourceTree = "<group>"; };
+		4A6D96271B3ED83A002EEF31 /* ZLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,10 @@
 		4A6D95F91B3ED58D002EEF31 /* ZTabsViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4A6D96261B3ED82C002EEF31 /* Log */,
+				4A6D96231B3ED739002EEF31 /* Utility */,
+				4A6D96201B3ED6CD002EEF31 /* Constant */,
+				4A6D961C1B3ED624002EEF31 /* ZTabsView */,
 				4A6D95FC1B3ED58D002EEF31 /* AppDelegate.swift */,
 				4A6D95FE1B3ED58D002EEF31 /* ViewController.swift */,
 				4A6D96001B3ED58D002EEF31 /* Main.storyboard */,
@@ -110,6 +122,38 @@
 				4A6D96111B3ED58D002EEF31 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A6D961C1B3ED624002EEF31 /* ZTabsView */ = {
+			isa = PBXGroup;
+			children = (
+				4A6D961D1B3ED64A002EEF31 /* ZTabsView.swift */,
+			);
+			path = ZTabsView;
+			sourceTree = "<group>";
+		};
+		4A6D96201B3ED6CD002EEF31 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				4A6D96211B3ED6DE002EEF31 /* ColorConstant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		4A6D96231B3ED739002EEF31 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				4A6D96241B3ED750002EEF31 /* ColorUtility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		4A6D96261B3ED82C002EEF31 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				4A6D96271B3ED83A002EEF31 /* ZLog.swift */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +257,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6D95FF1B3ED58D002EEF31 /* ViewController.swift in Sources */,
+				4A6D96281B3ED83A002EEF31 /* ZLog.swift in Sources */,
+				4A6D961E1B3ED64A002EEF31 /* ZTabsView.swift in Sources */,
 				4A6D95FD1B3ED58D002EEF31 /* AppDelegate.swift in Sources */,
+				4A6D96251B3ED750002EEF31 /* ColorUtility.swift in Sources */,
+				4A6D96221B3ED6DE002EEF31 /* ColorConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
