@@ -1,2 +1,3 @@
 # ZTabsView
-A multiple tabs with content view written in swift
+
+![alt tag](https://github.com/CaryZheng/ZTabsView/blob/master/demo.gif)
