@@ -15,11 +15,11 @@ class ZLog
     static func d<T>(value: T)
     {
         printPrefix()
-        println(value)
+        print(value)
     }
     
     private static func printPrefix()
     {
-        print(prefix + ": ")
+        print(prefix + ": ", terminator: "")
     }
 }

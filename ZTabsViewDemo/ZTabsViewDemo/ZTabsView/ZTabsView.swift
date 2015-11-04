@@ -26,7 +26,7 @@ class ZTabsView : UIView
         super.init(frame: frame)
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -36,7 +36,7 @@ class ZTabsView : UIView
         
         let parentWidth = self.bounds.width
         
-        var tabIndicatorView = UIView()
+        let tabIndicatorView = UIView()
         tabIndicatorView.layer.anchorPoint = CGPointZero
         tabIndicatorView.frame = CGRectMake(0, 0, parentWidth, tabIndicatorViewHeight)
         tabIndicatorView.backgroundColor = UIColor.whiteColor()
@@ -47,13 +47,13 @@ class ZTabsView : UIView
             // tab
             let width = parentWidth/CGFloat(tabCount)
             
-            var indicatorView = UIView()
+            let indicatorView = UIView()
             indicatorView.layer.anchorPoint = CGPoint(x: 0, y: 0)
             
             let x = width * CGFloat(i)
             indicatorView.frame = CGRectMake(x, 0, width, tabIndicatorView.bounds.height)
             
-            var btn = UIButton()
+            let btn = UIButton()
             btn.frame = CGRectMake(0, 0, indicatorView.bounds.width, indicatorView.bounds.height)
             
             btn.titleLabel?.font = btn.titleLabel?.font.fontWithSize(14)
@@ -79,8 +79,8 @@ class ZTabsView : UIView
             tabIndicatorView.addSubview(indicatorView)
             
             // content
-            var contentView = contentViews[i]
-            let contentViewY = tabIndicatorView.bounds.origin.y - tabIndicatorView.layer.anchorPoint.y + tabIndicatorView.bounds.height
+            let contentView = contentViews[i]
+            let contentViewY = tabIndicatorView.bounds.origin.y + tabIndicatorView.bounds.height
             contentView.frame = CGRectMake(0, contentViewY, parentWidth, self.bounds.height-tabIndicatorViewHeight)
             
             mTabContentViews.append(contentView)
@@ -92,7 +92,7 @@ class ZTabsView : UIView
         
         // divider
         let dividerView = UIView()
-        dividerView.frame = CGRectMake(0, tabIndicatorView.frame.origin.y-tabIndicatorView.layer.anchorPoint.y+tabIndicatorView.bounds.height, parentWidth, 1)
+        dividerView.frame = CGRectMake(0, tabIndicatorView.frame.origin.y+tabIndicatorView.bounds.height, parentWidth, 1)
         dividerView.backgroundColor = ColorUtility.colorize(ColorConstant.common_divider)
         self.addSubview(dividerView)
         
@@ -119,6 +119,11 @@ class ZTabsView : UIView
         setCurrentTab(index)
     }
     
+    func getCurrentSelectedIndex() -> Int
+    {
+        return mCurrentSelectedIndex
+    }
+    
     func setCurrentTab(index: Int)
     {
         for(var i = 0; i < mTabIndicatorViews.count; ++i)
@@ -131,11 +136,11 @@ class ZTabsView : UIView
                 {
                     if childView is UIButton
                     {
-                        childView.setTitleColor(ColorUtility.colorize(ColorConstant.main_theme), forState: UIControlState.Normal)
+                        (childView as! UIButton).setTitleColor(ColorUtility.colorize(ColorConstant.main_theme), forState: UIControlState.Normal)
                     }
-                    else if childView is UIView
+                    else
                     {
-                        (childView as! UIView).hidden = false
+                        childView.hidden = false
                     }
                 }
             }
@@ -145,11 +150,11 @@ class ZTabsView : UIView
                 {
                     if childView is UIButton
                     {
-                        childView.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+                        (childView as! UIButton).setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
                     }
-                    else if childView is UIView
+                    else
                     {
-                        (childView as! UIView).hidden = true
+                        childView.hidden = true
                     }
                 }
             }

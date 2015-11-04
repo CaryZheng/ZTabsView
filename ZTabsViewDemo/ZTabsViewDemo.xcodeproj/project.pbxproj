@@ -200,6 +200,8 @@
 		4A6D95EF1B3ED58D002EEF31 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = CaryZheng;
 				TargetAttributes = {
@@ -459,6 +461,7 @@
 				4A6D96181B3ED58D002EEF31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A6D96191B3ED58D002EEF31 /* Build configuration list for PBXNativeTarget "ZTabsViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +470,7 @@
 				4A6D961B1B3ED58D002EEF31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

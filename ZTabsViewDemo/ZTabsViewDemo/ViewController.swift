@@ -29,20 +29,20 @@ class ViewController: UIViewController, IZTabsView {
         let parentWidth = self.view.bounds.size.width
         let parentHeight = self.view.bounds.size.height
         
-        var tabsView = ZTabsView()
+        let tabsView = ZTabsView()
         tabsView.delegate = self
         
         tabsView.frame = CGRectMake(0, statusBarHeight, parentWidth, parentHeight)
         
         let tabTitles = ["Tab1", "Tab2", "Tab3"]
         
-        var view1 = UIView()
+        let view1 = UIView()
         view1.backgroundColor = UIColor.redColor()
         
-        var view2 = UIView()
+        let view2 = UIView()
         view2.backgroundColor = UIColor.yellowColor()
         
-        var view3 = UIView()
+        let view3 = UIView()
         view3.backgroundColor = UIColor.blueColor()
         
         let contentViews = [view1, view2, view3]
